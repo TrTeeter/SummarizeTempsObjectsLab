@@ -15,32 +15,65 @@ namespace SummarizeTempsObjects
 
         public int AverageTemperature()
         {
+            int sum = 0;
             // add logic to calculate the average
-            return 0; // <-- Replace this with the actual average
+           foreach(int sumtemp in _temperatures)
+            {
+               sum += sumtemp ; 
+            }
+            return sum / _temperatures.Count; // <-- Replace this with the actual average
         }
 
         public int TempsAboveThreshold(int threshold)
         {
+            int abtn = 0;
             // add logic to calculate temps above the threshold
-            return 0; // <-- Replace this with the number
+            foreach (int abovetemp in _temperatures)
+            {
+                
+                if (abovetemp>threshold)
+                {
+                    abtn++;
+                }
+            }
+            return abtn; // <-- Replace this with the number
         }
 
         public int TempsBelowThreshold(int threshold)
         {
             // add logic to calculate and return temps below the threshold
-            return 0; // <-- Replace this with the number
+            int btn = 0;
+           
+            foreach (int bellowtemp in _temperatures)
+            {
+
+                if (bellowtemp < threshold)
+                {
+                    btn++;
+                }
+            }
+            return btn; // <-- Replace this with the number
         }
 
         public int TempsAtThreshold(int threshold)
         {
             // add logic to calculate and return temps at the threshold
-            return 0; // <-- Replace this with the number
+            int at = 0;
+            foreach (int attemp in _temperatures)
+            {
+
+                if (attemp == threshold)
+                {
+                    at++;
+                }
+            }
+            return at; // <-- Replace this with the number
         }
 
         public int NumberOfTemperatures()
         {
             // add logic to return the number of temparature readings
-            return 0; // <-- Replace this with the number
+            return _temperatures.Count; // <-- Replace this with the number
         }
     }
 }
