@@ -26,33 +26,33 @@ namespace SummarizeTempsObjects
 
         public int TempsAboveThreshold(int threshold)
         {
-            int abtn = 0;
+            int abt = 0;
             // add logic to calculate temps above the threshold
             foreach (int abovetemp in _temperatures)
             {
                 
                 if (abovetemp>threshold)
                 {
-                    abtn++;
+                    abt++;
                 }
             }
-            return abtn; // <-- Replace this with the number
+            return abt; // <-- Replace this with the number
         }
 
         public int TempsBelowThreshold(int threshold)
         {
             // add logic to calculate and return temps below the threshold
-            int btn = 0;
+            int bet = 0;
            
             foreach (int bellowtemp in _temperatures)
             {
 
                 if (bellowtemp < threshold)
                 {
-                    btn++;
+                    bet++;
                 }
             }
-            return btn; // <-- Replace this with the number
+            return bet; // <-- Replace this with the number
         }
 
         public int TempsAtThreshold(int threshold)
